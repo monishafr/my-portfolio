@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+
+  <!-- Google Fonts (Montserrat as a stand-in for Uber font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">My Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero / Intro Section (Optional)
+  <section class="hero" id="home">
+    <h1>Welcome!</h1>
+    <p>Scroll down to explore...</p>
+  </section>
+  -->
+
+<!-- About Section -->
+<section class="section fade-in" id="about">
+    <h2>About Me.</h2>
+
+    <!-- Data Science GIF in top-left corner-->
+    <div class="ds-illustration">
+        <img
+        src="images/Woman DS.GIF"
+        alt="Data Science Illustration"
+        />
+    </div>
+        
+  
+    <!-- Left-Aligned Name & Role with typing effect on "ist." -->
+    <div class="intro">
+      <h3 class="my-name">Monisha Patro</h3>
+      <p class="role">
+        <em>
+          - Data Scient<span id="type-anim"></span>
+        </em>
+      </p>
+    </div>
+  
+    <!-- Image (left) & Paragraph (right) -->
+    <div class="about-container">
+      <div class="profile-container">
+        <!-- Rotating dashed circle (slowed down) -->
+        <div class="circle-outline"></div>
+  
+        <!-- Actual Profile Image -->
+        <img 
+          src="images/Blue Hoodie IU.jpg" 
+          alt="Monisha Patro"
+          class="profile-pic"
+        />
+      </div>
+      
+      <div class="about-right">
+        <p class="about-text">
+          Hey, this is Monisha Patro!
+          <br><br>
+          I have a master’s in Data Science from Indiana University Bloomington, 
+          following my bachelor’s in Computer Science and Engineering, where I first discovered my passion 
+          for data. I love working on Applied Machine Learning, NLP, Statistics, and Analytics. For me, 
+          the most exciting part is taking raw data and a problem statement, diving into exploratory 
+          data analysis (EDA), uncovering patterns, and figuring out the best approach to solve the problem. 
+          Turning messy, complex datasets into clear, actionable solutions is something I find incredibly 
+          rewarding. 
+          <br><br>
+          Feel free to explore my portfolio and reach out if you'd like to connect or collaborate—I’d love 
+          to hear from you!
+        </p>
+      </div>
+    </div>
+  
+<!-- Download Resume Button -->
+<div class="button-wrapper">
+    <!-- target="_blank" opens the PDF in a new tab;
+         download attribute triggers a file download in most browsers -->
+    <a 
+      href="Resume/MonishaPatro-DataScience.pdf" 
+      class="btn" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      download
+    >
+      Download Resume
+    </a>
+  </div>
+
+  <!-- Social Links (centered) -->
+<div class="social-links">
+    <a href="https://www.linkedin.com/in/monisha-patro/" target="_blank" rel="noopener noreferrer">
+      <img src="images/linkedin.png" alt="LinkedIn" class="social-icon"/>
+    </a>
+    <a href="https://github.com/monishafr" target="_blank" rel="noopener noreferrer">
+      <img src="images/Github.jpeg" alt="GitHub" class="social-icon"/>
+    </a>
+    <a href="mailto:monishaapatro@gmail.com">
+      <img src="images/Email.jpeg" alt="Email" class="social-icon"/>
+    </a>
+  </div>
+  
+    <!-- Inline Script for typing animation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const typedSpan = document.getElementById('type-anim');
+        const letters = "ist.";
+        let i = 0;
+  
+        function typeLetters() {
+          if (i < letters.length) {
+            typedSpan.textContent += letters.charAt(i);
+            i++;
+            setTimeout(typeLetters, 150); // typing speed
+          }
+        }
+        // Delay briefly before starting
+        setTimeout(typeLetters, 500);
+      });
+    </script>
+  </section>
+  
+
+
+<!-- Education Section -->
+<section class="section fade-in" id="education">
+    <h2>Education.</h2>
+  
+    <div class="edu-container">
+      <!-- First Education Card -->
+      <div class="edu-item fade-in">
+        <div class="edu-left">
+          <h3>Indiana University Bloomington</h3>
+          <p class="degree">Master's</p>
+          <p>Data Science</p>
+        </div>
+        <div class="edu-right">
+          <p class="dates">August 2023 – May 2025</p>
+          <p class="cgpa">CGPA: 3.72</p>
+        </div>
+      </div>
+  
+      <!-- Second Education Card -->
+      <div class="edu-item fade-in">
+        <div class="edu-left">
+          <h3>Vellore Institute of Technology</h3>
+          <p class="degree">Bachelor's</p>
+          <p>Computer Science and Engineering</p>
+        </div>
+        <div class="edu-right">
+          <p class="dates">June 2019 – May 2023</p>
+          <p class="cgpa">CGPA: 3.8</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Experience Section -->
+<section class="section fade-in" id="experience">
+    <h2>Experience</h2>
+    
+    <div class="exp-container">
+      <!-- 1. Candid -->
+      <div class="exp-item fade-in">
+        <div class="exp-header">
+          <a href="https://www.candid.org/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Candid.png" alt="Candid Logo" class="exp-logo"/>
+          </a>
+          <div class="exp-info">
+            <h3>Candid</h3>
+            <p class="exp-dates">May 2024 – December 2024</p>
+            <p class="exp-position">Technology Intern</p>
+          </div>
+        </div>
+        <ul class="exp-details">
+          <li>Developed an AI-powered chatbot using large language models, increasing user engagement by 70%. Streamlined nonprofit data access and reduced search time by 50%, improving user satisfaction.</li>
+          <li>Created custom dashboards with Power BI and Tableau for nonprofit organizations, increasing data visibility. Improved decision-making by 30% across stakeholders.</li>
+          <li>Built predictive models with R and Python to forecast nonprofit funding trends at 88% accuracy. Guided strategic decisions for nonprofits and donors, increasing funding efficiency by 40% and optimizing resource allocation.</li>
+        </ul>
+      </div>
+  
+      <!-- 2. eProtons -->
+      <div class="exp-item fade-in">
+        <div class="exp-header">
+          <a href="https://techmologics.io/case-study-for-ev-charging-station-management-system/" target="_blank" rel="noopener noreferrer">
+            <img src="images/eProtons.png" alt="eProtons Logo" class="exp-logo"/>
+          </a>
+          <div class="exp-info">
+            <h3>eProtons</h3>
+            <p class="exp-dates">October 2022 – February 2023</p>
+            <p class="exp-position">Data Analyst Intern</p>
+          </div>
+        </div>
+        <ul class="exp-details">
+          <li>Developed machine learning algorithms to optimize EV charging patterns, reducing energy consumption by 22% and increasing charging efficiency.</li>
+          <li>Processed real-time data from IoT-enabled EV charging stations, reducing data latency by 45% and achieving sub-one-second response times.</li>
+          <li>Built predictive models for real-time demand forecasting, cutting peak energy costs by 18% and enhancing grid load management.</li>
+        </ul>
+      </div>
+  
+      <!-- 3. Mukham -->
+      <div class="exp-item fade-in">
+        <div class="exp-header">
+          <a href="https://digitalfortress.in/products" target="_blank" rel="noopener noreferrer">
+            <img src="images/Mukham.png" alt="Mukham Logo" class="exp-logo"/>
+          </a>
+          <div class="exp-info">
+            <h3>Mukham</h3>
+            <p class="exp-dates">June 2022 – November 2022</p>
+            <p class="exp-position">Data Analyst Intern</p>
+          </div>
+        </div>
+        <ul class="exp-details">
+          <li>Developed anti-spoofing algorithms using convolutional neural networks, reducing fraudulent access attempts by 50%.</li>
+          <li>Applied machine learning and statistical analysis to facial recognition data, improving attendance tracking accuracy by 45% and decreasing false-positives by 20%.</li>
+          <li>Integrated geolocation analytics into access control systems, increasing location-based authentication accuracy by 35%. Created interactive data visualizations to reveal access patterns and security risks.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Projects Section -->
+<section class="section fade-in" id="projects">
+    <h2>Projects</h2>
+  
+    <div class="project-container">
+      
+      <!-- Project 1 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/Advanced-Face-Recognition-with-Deep-Learning-and-HOG" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/HOG.png" alt="Advanced Face Recognition" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>Advanced Face Recognition</h3>
+          <p>
+            This project implements a face recognition pipeline by combining traditional and deep 
+            learning techniques. It uses HOG for face detection and aligns faces with 68 landmarks. 
+            A deep learning model generates 128-d embeddings, ensuring similar faces are closer while 
+            different faces remain distinct. Finally, a classifier like Linear SVM identifies 
+            individuals, creating a robust and accurate face recognition system.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/Google-Ads-Optimizer-/tree/main" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/Google.jpg" alt="Google Ads Optimizer" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>Google Ads Optimizer</h3>
+          <p>
+            This project optimizes Google Ads campaigns using advanced ML and data analysis. By 
+            analyzing 50,000 ad interactions, it identifies factors influencing CTR and uses 
+            Gradient Boosted Trees to predict ad clicks. A dynamic bidding system adjusts bids 
+            based on probabilities, improving targeting and ROI.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/CityLink-RideShare-Hub/tree/main" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/RideShare.jpeg" alt="CityLink Rideshare" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>CityLink RideShare Hub</h3>
+          <p>
+            A platform promoting economical, sustainable intercity travel by connecting drivers and passengers 
+            on shared routes. Built with HTML, CSS, JavaScript, Flask, and SQL, it enhances accessibility and 
+            fosters a community-driven approach to travel.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/Information-Visualization/tree/main" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/Meta Kaggle.jpeg" alt="Meta-Kaggle Analysis" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>Meta-Kaggle Analysis</h3>
+          <p>
+            Analyzes Meta-Kaggle data to explore trends in data science competitions, submission patterns, 
+            and tool popularity. Visualizations highlight Kaggle’s evolving role as a learning platform, 
+            mirroring broader trends in the data science community.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 5 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/Airbnb-in-New-York-City---Data-Visualization" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/Airbnb.jpeg" alt="NYC Airbnb Dashboard" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>NYC Airbnb Dashboard</h3>
+          <p>
+            Analyzes 48,000+ listings to uncover pricing, demand, and availability patterns. 
+            Interactive visualizations highlight borough-specific trends, room type distributions, 
+            and pricing strategies, providing actionable insights for hosts, investors, and policymakers.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 6 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/Talking-Texts-Applying-NLP-Techniques-to-Decode-Conversations-in-Novels" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/TalkingTexts.jpeg" alt="Talking Texts NLP" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>Talking Texts: NLP in Novels</h3>
+          <p>
+            Leverages NLP techniques to analyze and decode character dialogues in classic novels. 
+            Explores dialogue patterns and linguistic styles of different authors, uncovering 
+            character interactions and narrative insights.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 7 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/FIFA-2022-WorldCup-Sentiment-Analysis" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/FIFA.jpeg" alt="FIFA 2022 Sentiment" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>FIFA Worldcup Sentiment Analysis</h3>
+          <p>
+            Analyzes Reddit comments about the 2022 World Cup using ML and transformer-based models 
+            like RoBERTa. Fine-tuned RoBERTa improved sentiment classification accuracy, showcasing 
+            modern NLP’s power for capturing nuanced fan reactions.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Project 8 -->
+      <div class="project-card fade-in">
+        <a href="https://github.com/monishafr/Social-Media-Mining" 
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/Data mining service.jpeg" alt="Social Media Mining" class="project-thumb">
+        </a>
+        <div class="project-info">
+          <h3>Social Media Mining Projects</h3>
+          <p>
+            Documentation and results for analyzing Reddit data across fashion trends, video game culture, 
+            and sports sentiments. Involves advanced analytical methods including sentiment analysis and 
+            topic modeling, revealing key community insights.
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<!-- Contact Section -->
+<section class="section fade-in" id="contact">
+    <h2>Contact</h2>
+  
+    <div class="contact-grid">
+      <!-- Left Column -->
+      <div class="contact-left">
+        <h3>University Email</h3>
+        <p>monpatro@iu.edu</p>
+  
+        <h3>Personal Email</h3>
+        <p>monishaapatro@gmail.com</p>
+  
+        <h3>Social Network</h3>
+        <div class="social-icons">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/monisha-patro/" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.png" alt="LinkedIn Logo" class="contact-icon"/>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/monishafr" target="_blank" rel="noopener noreferrer">
+            <img src="images/Github.jpeg" alt="GitHub Logo" class="contact-icon"/>
+          </a>
+          <!-- Email -->
+          <a href="mailto:monishaapatro@gmail.com">
+            <img src="images/Email.jpeg" alt="Email Icon" class="contact-icon"/>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Right Column -->
+      <div class="contact-right">
+        <h3>Address</h3>
+        <p>Indiana University Bloomington, 107 S Indiana Ave</p>
+  
+        <h3>City</h3>
+        <p>Bloomington</p>
+  
+        <h3>Pin Code</h3>
+        <p>47405</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="footer">
+    <p>© 2025 Monisha Patro. All rights reserved.</p>
+  </footer>
+  
+  
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
