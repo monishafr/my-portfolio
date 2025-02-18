@@ -598,4 +598,76 @@
   }
   */
   
+
+  /* FOR MOBILE VIEW */
+  @media only screen and (max-width: 768px) {
+    /* Navigation: Stack menu items vertically and center them */
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    .navbar ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    /* Hero Section: Center text and reduce padding */
+    .hero {
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    /* About Section Adjustments */
+    .intro {
+      margin: 2rem auto;
+      text-align: center;
+      margin-left: 0;
+    }
+    .about-container {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+    /* Remove absolute positioning for the GIF on mobile */
+    .ds-illustration {
+      position: static;
+      margin-bottom: 2rem;
+      width: 90%;
+    }
+    /* Scale down profile picture and circle for mobile */
+    .profile-container {
+      width: 300px;
+      height: 300px;
+    }
+    .profile-pic {
+      width: 300px;
+      height: 300px;
+    }
+    .circle-outline {
+      width: 340px;
+      height: 340px;
+    }
+  
+    /* Education, Experience, Projects, and Contact Sections: Reduce padding */
+    .section {
+      padding: 3rem 1rem;
+    }
+  
+    /* Projects: Make the grid a single column */
+    .project-container {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Contact: Stack columns vertically */
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Social links: Adjust margin for better spacing */
+    .social-links {
+      margin: 1rem 0;
+    }
+  }
+  
   
